@@ -94,6 +94,10 @@ contract EzMint is ERC721URIStorage, Ownable {
     function updatePricePerTokenInWei(uint256 _pricePerTokenInWei) onlyAdmin public {
         pricePerTokenInWei = _pricePerTokenInWei;
     }
+
+    function getPricePerTokenInWei() public view returns (uint256) {
+        return pricePerTokenInWei;
+    }
  
     function addWhitelisted(address _address) public onlyAdmin onlyWhitelisted {
         isWhitelisted[_address] = true;

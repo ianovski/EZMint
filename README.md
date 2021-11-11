@@ -45,3 +45,6 @@ Set the `uri` variable in `scripts/default-uri.js` with the uri to a default NFT
 
 ### Add whitelisted address to allow some administrative functions
 `node scripts/add-whitelisted.js`
+
+### Verify contract
+`npx hardhat verify --network rinkeby <Contract Address>`
