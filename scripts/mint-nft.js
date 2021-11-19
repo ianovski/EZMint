@@ -49,4 +49,4 @@ async function mintNFT(pricePerTokenInWei) {
     })
 }
 
-mintNFT(100)
+mintNFT(10000000000000000)

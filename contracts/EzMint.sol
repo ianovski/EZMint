@@ -14,8 +14,8 @@ contract EzMint is ERC721URIStorage, Ownable {
     using SafeMath for uint256;
 
     uint256 invocations = 0;
-    uint256 maxInvocations = 100000;
-    uint256 pricePerTokenInWei = 100;
+    uint256 maxInvocations = 50;
+    uint256 pricePerTokenInWei = 10000000000000000;
     bool isActive = false;
     string defaultURI;
     address public admin;
@@ -95,10 +95,18 @@ contract EzMint is ERC721URIStorage, Ownable {
         pricePerTokenInWei = _pricePerTokenInWei;
     }
 
+    function getInvocations() public view returns (uint256) {
+        return invocations;
+    }
+ 
+    function getMaxInvocations() public view returns (uint256) {
+        return maxInvocations;
+    }
+
     function getPricePerTokenInWei() public view returns (uint256) {
         return pricePerTokenInWei;
     }
- 
+
     function addWhitelisted(address _address) public onlyAdmin onlyWhitelisted {
         isWhitelisted[_address] = true;
     }
