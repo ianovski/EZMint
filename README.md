@@ -7,6 +7,8 @@ Create a .env file in the project's root directory. It should look like this:
 API_URL="https://eth-rinkeby.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY="your-private-key"
 PUBLIC_KEY="your-public-key"
+ETH_SCAN_API_KEY="your-api-Ether-scan-key"
+CONTRACT_ADDRESS="your-deployed-contract-address"
 ```
 
 ## Install imported contracts
@@ -21,12 +23,7 @@ PUBLIC_KEY="your-public-key"
 Note down the deployed contract address
 
 ## Update scripts
-Update the `contractAddress` variable for the following scripts:
-
-- scripts/toggle-active.js
-- scripts/add-whiteliest.js (also need to update new_address)
-- scripts/default-uri.js
-- scripts/mint-nft.js
+Update the `CONTRACT_ADDRESS` variable in your .env file
 
 ## Set default URI
 Set the `uri` variable in `scripts/default-uri.js` with the uri to a default NFT metadata .json file
