@@ -145,4 +145,8 @@ contract EzMint is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         isWhitelisted[_address] = false;
     }
 
+    function isMintActive() public view returns (bool) {
+        return isActive;
+    }
+
 }
